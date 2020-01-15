@@ -6,7 +6,7 @@ const UPDATE_INTERVAL = 100;
 @Component({
     selector: 'df-timer-bar',
     template: `
-        <mat-progress-bar mode="determinate" [value]="percentage"></mat-progress-bar>
+        <mat-progress-bar dir='rtl' mode="determinate" [value]="percentage"></mat-progress-bar>
     `,
     styles: [`
 

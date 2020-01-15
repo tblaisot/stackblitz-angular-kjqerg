@@ -3,8 +3,7 @@ $mat-snack-bar-button-height: 36px;
 $mat-snack-bar-line-height: 20px;
 // Button vertical margin is used to ensure that a button height of 36px, when the containing
 // space falls below 36px.
-$mat-snack-bar-button-vertical-margin:
-  -(($mat-snack-bar-button-height - $mat-snack-bar-line-height) / 2);
+$mat-snack-bar-button-vertical-margin: -(($mat-snack-bar-button-height - $mat-snack-bar-line-height) / 2);
 
 .mat-simple-snackbar {
   display: flex;
@@ -13,12 +12,13 @@ $mat-snack-bar-button-vertical-margin:
   flex-direction: row;
   line-height: $mat-snack-bar-line-height;
   opacity: 1;
+  color: white;
 }
 
 .mat-simple-snackbar-action {
   flex-shrink: 0;
-  margin: $mat-snack-bar-button-vertical-margin $mat-snack-bar-button-horizontal-margin * -1
-          $mat-snack-bar-button-vertical-margin $mat-snack-bar-button-horizontal-margin;
+  margin: $mat-snack-bar-button-vertical-margin $mat-snack-bar-button-horizontal-margin * -1 $mat-snack-bar-button-vertical-margin $mat-snack-bar-button-horizontal-margin;
+  color: white;
 
   button {
     max-height: $mat-snack-bar-button-height;
