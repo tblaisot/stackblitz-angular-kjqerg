@@ -24,12 +24,12 @@ import {MatSnackBarRef, MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
     'class': 'df-snackbar',
   }
 })
-export class DFSnackBar {
+export class SnackBarComponent {
   /** Data that was injected into the snack bar. */
   data: {message: string, action: string};
 
   constructor(
-    public snackBarRef: MatSnackBarRef<DFSnackBar>,
+    public snackBarRef: MatSnackBarRef<SnackBarComponent>,
     @Inject(MAT_SNACK_BAR_DATA) data: any) {
     this.data = data;
   }
