@@ -1,5 +1,9 @@
-<span>DF</span>
-<span>{{data.message}}</span>
-<div class="mat-simple-snackbar-action"  *ngIf="hasAction">
-  <button mat-button (click)="action()">{{data.action}}</button>
+<div class="snackbar-message-container">
+    <div class="title">{{data.title}}</div>
+    <div class="description">{{data.description}}</div>
+</div>
+<div class="mat-simple-snackbar-action">
+    <button mat-button (click)="close()">
+        <mat-icon>close</mat-icon>
+    </button>
 </div>

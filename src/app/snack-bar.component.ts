@@ -1,11 +1,3 @@
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
 import {Component, ViewEncapsulation, Inject, ChangeDetectionStrategy} from '@angular/core';
 import {MatSnackBarRef, MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 
@@ -21,12 +13,12 @@ import {MatSnackBarRef, MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'df-snackbar',
+    'class': 'mat-simple-snackbar',
   }
 })
 export class SnackBarComponent {
   /** Data that was injected into the snack bar. */
-  data: {message: string, action: string};
+  data: {title:string, description: string};
 
   constructor(
     public snackBarRef: MatSnackBarRef<SnackBarComponent>,
@@ -34,13 +26,7 @@ export class SnackBarComponent {
     this.data = data;
   }
 
-  /** Performs the action on the snack bar. */
-  action(): void {
-    this.snackBarRef.dismissWithAction();
-  }
-
-  /** If the action button should be shown. */
-  get hasAction(): boolean {
-    return !!this.data.action;
+  close(): void {
+    this.snackBarRef.dismiss();
   }
 }

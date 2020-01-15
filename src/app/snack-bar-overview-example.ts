@@ -13,9 +13,13 @@ import {SnackBarService} from './snack-bar.service'
 export class SnackBarOverviewExample {
   constructor(private _snackBar: SnackBarService) {}
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action, {
-      duration: 2000,
+  openSnackBarNoDuration() {
+    this._snackBar.openMessage("this is a title", "this is a description");
+  }
+
+  openSnackBar() {
+    this._snackBar.openMessage("this is a title", "this is a description", {
+      duration: 200000,
     });
   }
 }

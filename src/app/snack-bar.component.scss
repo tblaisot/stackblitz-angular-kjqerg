@@ -10,6 +10,7 @@ $mat-snack-bar-button-vertical-margin:
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   line-height: $mat-snack-bar-line-height;
   opacity: 1;
 }
@@ -27,5 +28,12 @@ $mat-snack-bar-button-vertical-margin:
   [dir='rtl'] & {
     margin-left: -$mat-snack-bar-button-horizontal-margin;
     margin-right: $mat-snack-bar-button-horizontal-margin;
+  }
+}
+
+.snackbar-message-container {
+  .title {
+    //font-weight: bold;
+    font-size: large;
   }
 }

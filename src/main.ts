@@ -10,7 +10,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './app/material-module';
 
 import {SnackBarOverviewExample} from './app/snack-bar-overview-example';
-import {DFSnackBar} from './app/snack-bar.component'
+import {SnackBarComponent} from './app/snack-bar.component'
+import {SnackBarContainerComponent} from './app/snack-bar-container.component'
+import { TimerBarComponent } from './app/timer-bar.component';
 
 @NgModule({
   imports: [
@@ -22,17 +24,12 @@ import {DFSnackBar} from './app/snack-bar.component'
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [SnackBarOverviewExample, DFSnackBar],
-  declarations: [SnackBarOverviewExample, DFSnackBar],
+  entryComponents: [SnackBarOverviewExample, SnackBarComponent, SnackBarContainerComponent],
+  declarations: [SnackBarOverviewExample, SnackBarComponent, SnackBarContainerComponent, TimerBarComponent],
   bootstrap: [SnackBarOverviewExample],
   providers: []
 })
 export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-
-
-/**  Copyright 2019 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
+    .catch(err => console.error(err));
